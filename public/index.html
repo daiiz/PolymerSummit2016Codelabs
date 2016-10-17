@@ -10,7 +10,7 @@
     <meta name="application-name" content="Notes">
     <link rel="icon"
       sizes="192x192"
-      href="bower_components/note-app/common/images/icon-4x.png">
+      href="bower_components/note-app-elements/images/icon-4x.png">
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="bower_components/web-animations-js/web-animations.min.js"></script>
@@ -37,10 +37,14 @@
 
     <!-- Firebaseを簡単にセットアップする -->
     <firebase-app
-        name=""
+        name="notes"
         api-key=""
-        auth-domain=""
-        database-url="">
+        auth-domain="daiiz-polymer16.firebaseapp.com"
+        database-url="https://daiiz-polymer16.firebaseio.com">
     </firebase-app>
+
+    <!-- A new element is born -->
+    <note-app></note-app>
+
   </body>
 </html>
