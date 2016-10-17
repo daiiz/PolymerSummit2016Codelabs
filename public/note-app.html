@@ -6,15 +6,24 @@
   <template>
       <style include="note-app-shared-styles"></style>
       <!-- ツールバーを表示 -->
-      <na-toolbar></na-toolbar>
+      <na-toolbar
+          signed-in="[[signedIn]]"
+          on-sign-out="signOut">
+      </na-toolbar>
       <!-- Sign in with Google のボタンを表示 -->
-      <na-login></na-login>
+      <na-login
+          on-sign-in="signIn"
+          signed-in="[[signedIn]]"
+          disabled="[[!online]]">
+      </na-login>
 
       <!-- Firebase custom element that implements the business logic we need for authentication -->
       <firebase-auth
           id="auth"
           app-name="notes"
-          provider="google">
+          provider="google"
+          signed-in="{{signedIn}}"
+          user="{{user}}">
       </firebase-auth>
   </template>
   <script>
