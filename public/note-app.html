@@ -28,10 +28,15 @@
   </template>
   <script>
     Polymer({
-      is: 'note-app'
+      is: 'note-app',
 
       /* sharing common implementation */
-      behaviors: [Polymer.NoteAppBehavior]
+      behaviors: [Polymer.NoteAppBehavior],
+
+      /* implement the signIn listener */
+      signIn: function() {
+          this.$.auth.signInWithPopup();
+      }
     });
   </script>
 </dom-module>
