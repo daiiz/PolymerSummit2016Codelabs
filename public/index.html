@@ -24,6 +24,7 @@
     </style>
   </head>
   <body>
+    <!-- Service Worker を簡単にセットアップする -->
     <platinum-sw-register
         auto-register
         skip-waiting
@@ -33,5 +34,13 @@
       <platinum-sw-cache default-cache-strategy="networkFirst">
       </platinum-sw-cache>
     </platinum-sw-register>
+
+    <!-- Firebaseを簡単にセットアップする -->
+    <firebase-app
+        name=""
+        api-key=""
+        auth-domain=""
+        database-url="">
+    </firebase-app>
   </body>
 </html>
