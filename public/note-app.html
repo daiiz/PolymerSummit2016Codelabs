@@ -20,6 +20,9 @@
   <script>
     Polymer({
       is: 'note-app'
+
+      /* sharing common implementation */
+      behaviors: [Polymer.NoteAppBehavior]
     });
   </script>
 </dom-module>
