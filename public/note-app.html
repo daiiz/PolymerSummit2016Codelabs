@@ -9,6 +9,13 @@
       <na-toolbar></na-toolbar>
       <!-- Sign in with Google のボタンを表示 -->
       <na-login></na-login>
+
+      <!-- Firebase custom element that implements the business logic we need for authentication -->
+      <firebase-auth
+          id="auth"
+          app-name="notes"
+          provider="google">
+      </firebase-auth>
   </template>
   <script>
     Polymer({
